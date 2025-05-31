@@ -1,0 +1,157 @@
+/* Inputs de tareas: título y descripción */
+.titleIn, .desIn {
+  border-radius: 30px;
+  border: 1px solid #d1d8e0;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border 0.2s;
+  background: #F7F5F0;
+}
+
+.titleIn:focus, .desIn:focus {
+  border: 1.5px solid #95b0b7;
+  outline: none;
+}
+
+.titleIn::placeholder,
+.desIn::placeholder,
+input.titleIn::placeholder,
+input.desIn::placeholder {
+  color: #7a7a7a !important;
+  opacity: 1;
+}
+
+/* Botón para agregar tarea */
+.btn-outline-primary {
+  border-radius: 30px;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+}
+
+.tasks-section {
+  min-width: 320px;
+  max-width: 900px;
+  flex: 1 1 0;
+  background: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Item de la lista de tareas */
+.todo-item {
+  background: #f1f2f6;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.2s;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+/* Contenedor de botones de acción dentro del item de tarea */
+.todo-item .d-flex.flex-row {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+/* Título de la tarea */
+.todo-title {
+  font-weight: bold;
+  color: #2d3436;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Descripción de la tarea */
+.todo-desc {
+  color: #636e72;
+  font-size: 0.97rem;
+  margin-left: 0;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.todo-title,
+.todo-desc {
+  word-break: break-word;
+  white-space: pre-line; 
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn,
+.delete-btn {
+  border-radius:25%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.edit-btn i,
+.save-btn i,
+.cancel-btn i,
+.delete-btn i {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn { background: #EAE6DA; }
+.edit-btn i { color: #808f77; }
+.edit-btn:hover, .edit-btn:focus { background: #d1cab1; }
+.edit-btn:hover i, .edit-btn:focus i { color: #808f77; }
+
+.save-btn { background: #e8f5e9; }
+.save-btn i { color: #388e3c; }
+.save-btn:hover, .save-btn:focus { background: #c8e6c9; }
+.save-btn:hover i, .save-btn:focus i { color: #1b5e20; }
+
+.cancel-btn { background: #fff3e0; }
+.cancel-btn i { color: #f57c00; }
+.cancel-btn:hover, .cancel-btn:focus { background: #ffe0b2; }
+.cancel-btn:hover i, .cancel-btn:focus i { color: #e65100; }
+
+.delete-btn { background: #ffebee; }
+.delete-btn i { color: #c35257; }
+.delete-btn:hover, .delete-btn:focus { background: #ffcdd2; }
+.delete-btn:hover i, .delete-btn:focus i { color: #c35257; }
+
+/* Ajuste de botones en móviles */
+@media (max-width: 480px) {
+  .todo-item .d-flex.flex-row {
+    justify-content: flex-start;
+  }
+}
+
+/* Responsividad para el item de tarea en móviles */
+@media (max-width: 480px) {
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+}
+
+textarea.form-control {
+  resize: none;
+  min-height: 38px;
+  max-height: 200px;
+  overflow-y: auto;
+  transition: height 0.2s;
+}
