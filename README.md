@@ -35,7 +35,6 @@ Para ejecutar esta aplicación localmente, necesitarás tener instalado lo sigui
 
 ```bash
 git clone https://github.com/Caalgato98Student/pomodoro_app
-cd matcha-pomodoro
 ```
 
 ---
